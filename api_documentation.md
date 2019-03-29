@@ -81,12 +81,16 @@ FORMAT: 1A
 + Response 200 (application/json)
     + Body
 
-            [
-                {
-                    "id": "1",
-                    "email": "email@email.com"
-                }
-            ]
+            {
+                "valid": "not_valid"
+            }
+
++ Response 200 (application/json)
+    + Body
+
+            {
+                "valid": "valid"
+            }
 
 ## Add coins [POST /api/add_coins]
 
