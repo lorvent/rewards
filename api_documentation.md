@@ -68,7 +68,7 @@ FORMAT: 1A
                 }
             }
 
-## Verify token [GET /api/verify_token]
+## Verify token [POST /api/verify_token]
 
 
 + Request (application/json)
