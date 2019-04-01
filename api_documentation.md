@@ -5,43 +5,6 @@ FORMAT: 1A
 #  [/api]
 # Group AuthController
 
-## login user [POST /api/login]
-
-
-+ Request (application/json)
-    + Body
-
-            {
-                "email": "email@email.com",
-                "password": "password"
-            }
-
-+ Response 200 (application/json)
-    + Body
-
-            {
-                "access_token": "jwt_token",
-                "token_type": "bearer",
-                "expires_in": "15420",
-                "user": {
-                    "id": "1",
-                    "email": "email@email.com"
-                }
-            }
-
-## user info [GET /api/me]
-
-
-+ Response 200 (application/json)
-    + Body
-
-            [
-                {
-                    "id": "1",
-                    "email": "email@email.com"
-                }
-            ]
-
 ## Verify token [POST /api/verify_token]
 
 
@@ -73,7 +36,8 @@ FORMAT: 1A
     + Body
 
             {
-                "coins": "coins"
+                "coins": "coins",
+                "token": "token"
             }
 
 + Response 200 (application/json)
