@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "2abbdcf5-b0a6-474d-b624-126aad12ace8",
+		"name": "Rewards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost/rewards/public/api/login?email=newuser@mail.com&password=newuser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"rewards",
+						"public",
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "newuser@mail.com"
+						},
+						{
+							"key": "password",
+							"value": "newuser"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL3Jld2FyZHNcL3B1YmxpY1wvYXBpXC9sb2dpbiIsImlhdCI6MTU1NDA4NzI5NSwibmJmIjoxNTU0MDg3Mjk1LCJqdGkiOiJackFMbDd5Z1JNUm8wekZnIiwic3ViIjo1LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.z2RvYh1pEHTPlzsaZDwlaBcKyXd7IuZJWl4dVRfgch4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost/rewards/public/api/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"rewards",
+						"public",
+						"api",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validate token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL3Jld2FyZHNcL3B1YmxpY1wvYXBpXC9sb2dpbiIsImlhdCI6MTU1NDA4NzI5NSwibmJmIjoxNTU0MDg3Mjk1LCJqdGkiOiJackFMbDd5Z1JNUm8wekZnIiwic3ViIjo1LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.z2RvYh1pEHTPlzsaZDwlaBcKyXd7IuZJWl4dVRfgch4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost/rewards/public/api/verify_token?token=75d1a2059bc6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"rewards",
+						"public",
+						"api",
+						"verify_token"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "75d1a2059bc6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add coins",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL3Jld2FyZHNcL3B1YmxpY1wvYXBpXC9sb2dpbiIsImlhdCI6MTU1NDA4NzI5NSwibmJmIjoxNTU0MDg3Mjk1LCJqdGkiOiJackFMbDd5Z1JNUm8wekZnIiwic3ViIjo1LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.z2RvYh1pEHTPlzsaZDwlaBcKyXd7IuZJWl4dVRfgch4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost/rewards/public/api/add_coins?coins=151542",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"rewards",
+						"public",
+						"api",
+						"add_coins"
+					],
+					"query": [
+						{
+							"key": "coins",
+							"value": "151542"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -5,7 +5,7 @@ FORMAT: 1A
 #  [/api]
 # Group AuthController
 
-## login user [PUT /api/login]
+## login user [POST /api/login]
 
 
 + Request (application/json)
@@ -42,32 +42,6 @@ FORMAT: 1A
                 }
             ]
 
-## Log the user out (Invalidate the token). [GET /api/logout]
-
-
-+ Response 200 (application/json)
-    + Body
-
-            {
-                "message": "Successfully logged out"
-            }
-
-## Refresh a token. [GET /api/refresh]
-
-
-+ Response 200 (application/json)
-    + Body
-
-            {
-                "access_token": "jwt_token",
-                "token_type": "bearer",
-                "expires_in": "15420",
-                "user": {
-                    "id": "1",
-                    "email": "email@email.com"
-                }
-            }
-
 ## Verify token [POST /api/verify_token]
 
 
@@ -99,7 +73,7 @@ FORMAT: 1A
     + Body
 
             {
-                "token": "token"
+                "coins": "coins"
             }
 
 + Response 200 (application/json)
