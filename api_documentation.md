@@ -4,6 +4,8 @@ FORMAT: 1A
 
 #  [/api]
 # Group AuthController
+status_code=0 - valid
+status_code=1 - not valid
 
 ## Verify token [POST /api/verify_token]
 
@@ -19,14 +21,16 @@ FORMAT: 1A
     + Body
 
             {
-                "valid": "not_valid"
+                "valid": "valid_token",
+                "status_code": 0
             }
 
 + Response 200 (application/json)
     + Body
 
             {
-                "valid": "valid"
+                "valid": "wrong_token",
+                "status_code": 1
             }
 
 ## Add coins [POST /api/add_coins]
@@ -44,12 +48,14 @@ FORMAT: 1A
     + Body
 
             {
-                "success": "success"
+                "success": "success",
+                "status_code": 0
             }
 
 + Response 400 (application/json)
     + Body
 
             {
-                "error": "wrong_token"
+                "error": "wrong_token",
+                "status_code": 1
             }
